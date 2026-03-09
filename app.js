@@ -53,7 +53,7 @@ function computeBreakEven(inputs, ordersSent) {
 }
 
 function fmt(n) {
-    return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    return '₺' + n.toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 }
 
 function fmtInt(n) {

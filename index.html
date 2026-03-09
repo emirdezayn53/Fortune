@@ -63,21 +63,21 @@
                 <div class="input-card">
                     <label for="productCost">Product Cost <span class="unit">(per unit)</span></label>
                     <div class="input-wrap">
-                        <span class="currency">$</span>
+                        <span class="currency">₺</span>
                         <input type="number" id="productCost" value="8" min="0" step="0.5" oninput="calculate()" />
                     </div>
                 </div>
                 <div class="input-card">
                     <label for="adCost">Advertising Cost <span class="unit">(per order)</span></label>
                     <div class="input-wrap">
-                        <span class="currency">$</span>
+                        <span class="currency">₺</span>
                         <input type="number" id="adCost" value="5" min="0" step="0.5" oninput="calculate()" />
                     </div>
                 </div>
                 <div class="input-card">
                     <label for="sellingPrice">Selling Price <span class="unit">(AOV)</span></label>
                     <div class="input-wrap">
-                        <span class="currency">$</span>
+                        <span class="currency">₺</span>
                         <input type="number" id="sellingPrice" value="30" min="0" step="0.5" oninput="calculate()" />
                     </div>
                 </div>
@@ -94,7 +94,7 @@
                 <div class="input-card">
                     <label for="shippingDelivered">Forward Shipping Cost <span class="unit">(per order)</span></label>
                     <div class="input-wrap">
-                        <span class="currency">$</span>
+                        <span class="currency">₺</span>
                         <input type="number" id="shippingDelivered" value="3" min="0" step="0.5"
                             oninput="calculate()" />
                     </div>
@@ -102,7 +102,7 @@
                 <div class="input-card">
                     <label for="shippingReturned">Return Shipping Cost <span class="unit">(per return)</span></label>
                     <div class="input-wrap">
-                        <span class="currency">$</span>
+                        <span class="currency">₺</span>
                         <input type="number" id="shippingReturned" value="2" min="0" step="0.5" oninput="calculate()" />
                     </div>
                 </div>
@@ -150,15 +150,15 @@
             <div class="kpi-grid">
                 <div class="kpi-card kpi-revenue">
                     <span class="kpi-label">Total Revenue</span>
-                    <span class="kpi-value" id="kpiRevenue">$0</span>
+                    <span class="kpi-value" id="kpiRevenue">₺0</span>
                 </div>
                 <div class="kpi-card kpi-cost">
                     <span class="kpi-label">Total Cost</span>
-                    <span class="kpi-value" id="kpiCost">$0</span>
+                    <span class="kpi-value" id="kpiCost">₺0</span>
                 </div>
                 <div class="kpi-card kpi-profit">
                     <span class="kpi-label">Net Profit</span>
-                    <span class="kpi-value" id="kpiProfit">$0</span>
+                    <span class="kpi-value" id="kpiProfit">₺0</span>
                 </div>
                 <div class="kpi-card kpi-margin">
                     <span class="kpi-label">Profit Margin</span>
@@ -233,7 +233,7 @@
                     <tbody>
                         <tr>
                             <td>Selling Price (AOV)</td>
-                            <td id="resAOV">$0</td>
+                            <td id="resAOV">₺0</td>
                         </tr>
                         <tr>
                             <td>Delivered Orders</td>
@@ -241,7 +241,7 @@
                         </tr>
                         <tr class="row-highlight">
                             <td><strong>Total Revenue</strong></td>
-                            <td id="resTotalRev"><strong>$0</strong></td>
+                            <td id="resTotalRev"><strong>₺0</strong></td>
                         </tr>
                     </tbody>
                 </table>
@@ -273,33 +273,33 @@
                     <tbody>
                         <tr>
                             <td>Product Cost</td>
-                            <td id="costProdFormula" class="formula">0 × $0</td>
-                            <td id="costProd">$0</td>
+                            <td id="costProdFormula" class="formula">0 × ₺0</td>
+                            <td id="costProd">₺0</td>
                         </tr>
                         <tr>
                             <td>Advertising Cost</td>
-                            <td id="costAdFormula" class="formula">0 × $0</td>
-                            <td id="costAd">$0</td>
+                            <td id="costAdFormula" class="formula">0 × ₺0</td>
+                            <td id="costAd">₺0</td>
                         </tr>
                         <tr>
                             <td>Shipping (Delivered Orders)</td>
-                            <td id="costShipDelFormula" class="formula">0 × $0</td>
-                            <td id="costShipDel">$0</td>
+                            <td id="costShipDelFormula" class="formula">0 × ₺0</td>
+                            <td id="costShipDel">₺0</td>
                         </tr>
                         <tr>
                             <td>Shipping (Undelivered Orders)</td>
-                            <td id="costShipRetFormula" class="formula">0 × ($0 + $0)</td>
-                            <td id="costShipRet">$0</td>
+                            <td id="costShipRetFormula" class="formula">0 × (₺0 + ₺0)</td>
+                            <td id="costShipRet">₺0</td>
                         </tr>
                         <tr class="row-subtotal">
                             <td>Total Shipping</td>
                             <td></td>
-                            <td id="costShipTotal">$0</td>
+                            <td id="costShipTotal">₺0</td>
                         </tr>
                         <tr class="row-highlight">
                             <td><strong>Total Cost</strong></td>
                             <td></td>
-                            <td id="costTotal"><strong>$0</strong></td>
+                            <td id="costTotal"><strong>₺0</strong></td>
                         </tr>
                     </tbody>
                 </table>
@@ -327,23 +327,23 @@
                     <tbody>
                         <tr>
                             <td>Total Revenue</td>
-                            <td id="profitRev">$0</td>
+                            <td id="profitRev">₺0</td>
                         </tr>
                         <tr>
                             <td>Total Cost</td>
-                            <td id="profitCost">$0</td>
+                            <td id="profitCost">₺0</td>
                         </tr>
                         <tr class="row-highlight">
                             <td><strong>Net Profit</strong></td>
-                            <td id="profitNet"><strong>$0</strong></td>
+                            <td id="profitNet"><strong>₺0</strong></td>
                         </tr>
                         <tr>
                             <td>Profit per Delivered Order</td>
-                            <td id="profitPerDel">$0</td>
+                            <td id="profitPerDel">₺0</td>
                         </tr>
                         <tr>
                             <td>Profit per Sent Order</td>
-                            <td id="profitPerSent">$0</td>
+                            <td id="profitPerSent">₺0</td>
                         </tr>
                         <tr>
                             <td>Profit Margin</td>
