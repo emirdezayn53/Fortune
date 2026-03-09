@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gold: #d4af37;
+  --gold-light: #f0d060;
+  --purple-deep: #3b0764;
+  --purple: #6b21a8;
+  --purple-glow: #a855f7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0a0a0f;
+  color: #f3e8ff;
+  font-family: 'Crimson Text', Georgia, serif;
+  overflow-x: hidden;
+}
+
+/* Stars background */
+.stars-bg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+  animation: twinkle var(--duration, 3s) ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+/* Gold shimmer text */
+.gold-shimmer {
+  background: linear-gradient(
+    90deg,
+    #a07820 0%,
+    #d4af37 25%,
+    #f0d060 50%,
+    #d4af37 75%,
+    #a07820 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
+}
+
+/* Glowing border */
+.glow-border {
+  box-shadow:
+    0 0 10px rgba(168, 85, 247, 0.3),
+    0 0 30px rgba(168, 85, 247, 0.1),
+    inset 0 0 10px rgba(168, 85, 247, 0.05);
+}
+
+.glow-border:hover {
+  box-shadow:
+    0 0 20px rgba(168, 85, 247, 0.5),
+    0 0 60px rgba(168, 85, 247, 0.2),
+    inset 0 0 20px rgba(168, 85, 247, 0.1);
+}
+
+.glow-gold {
+  box-shadow:
+    0 0 10px rgba(212, 175, 55, 0.4),
+    0 0 30px rgba(212, 175, 55, 0.2),
+    0 0 60px rgba(212, 175, 55, 0.1);
+}
+
+/* Fortune text typing effect */
+.fortune-char {
+  opacity: 0;
+  animation: fadeInChar 0.03s ease forwards;
+}
+
+@keyframes fadeInChar {
+  to { opacity: 1; }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6b21a8;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9333ea;
+}
+
+/* Orb animations */
+.orb {
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.15;
+  position: absolute;
+  pointer-events: none;
+}
+
+/* Upload zone hover */
+.upload-zone-active {
+  border-color: #d4af37 !important;
+  background: rgba(212, 175, 55, 0.05) !important;
+  box-shadow:
+    0 0 20px rgba(212, 175, 55, 0.3),
+    inset 0 0 20px rgba(212, 175, 55, 0.05) !important;
+}
