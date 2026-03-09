@@ -138,9 +138,9 @@ function updateBreakEven(inputs, ordersSent, currentRate) {
         ring.style.strokeDashoffset = circumference;
         ring.style.stroke = 'var(--red)';
         percentEl.style.color = 'var(--red)';
-        descEl.textContent = 'It is impossible to break even with the current cost structure. The selling price does not cover per-unit costs even at 100% delivery.';
+        descEl.textContent = 'Mevcut maliyet yapısıyla başabaş noktasına ulaşmak imkânsız. Satış fiyatı, %100 teslimat oranında bile birim maliyetleri karşılamıyor.';
         statusEl.className = 'be-status loss';
-        statusEl.textContent = '✕ Cannot break even';
+        statusEl.textContent = '✕ Başabaş mümkün değil';
         return;
     }
 
@@ -152,21 +152,21 @@ function updateBreakEven(inputs, ordersSent, currentRate) {
     if (currentRate > beRate) {
         ring.style.stroke = 'var(--green)';
         percentEl.style.color = 'var(--green)';
-        descEl.textContent = `You need at least ${beRate.toFixed(1)}% delivery rate to break even. Your current rate of ${currentRate}% is ${(currentRate - beRate).toFixed(1)} percentage points above break-even.`;
+        descEl.textContent = `Başabaş noktasına ulaşmak için en az %${beRate.toFixed(1)} teslimat oranı gerekiyor. Mevcut oranın %${currentRate}, başabaş noktasının ${(currentRate - beRate).toFixed(1)} puan üzerinde.`;
         statusEl.className = 'be-status profitable';
-        statusEl.textContent = '✓ Currently Profitable';
+        statusEl.textContent = '✓ Kârlı Durum';
     } else if (currentRate < beRate) {
         ring.style.stroke = 'var(--red)';
         percentEl.style.color = 'var(--red)';
-        descEl.textContent = `You need at least ${beRate.toFixed(1)}% delivery rate to break even. Your current rate of ${currentRate}% is ${(beRate - currentRate).toFixed(1)} percentage points below break-even.`;
+        descEl.textContent = `Başabaş noktasına ulaşmak için en az %${beRate.toFixed(1)} teslimat oranı gerekiyor. Mevcut oranın %${currentRate}, başabaş noktasının ${(beRate - currentRate).toFixed(1)} puan altında.`;
         statusEl.className = 'be-status loss';
-        statusEl.textContent = '✕ Currently at Loss';
+        statusEl.textContent = '✕ Zararda';
     } else {
         ring.style.stroke = 'var(--amber)';
         percentEl.style.color = 'var(--amber)';
-        descEl.textContent = `You are exactly at the break-even point. Any decrease in delivery rate will result in a loss.`;
+        descEl.textContent = `Tam olarak başabaş noktasındasın. Teslimat oranındaki herhangi bir düşüş zarara yol açar.`;
         statusEl.className = 'be-status breakeven-exact';
-        statusEl.textContent = '⚬ Exactly at Break-Even';
+        statusEl.textContent = '⚬ Tam Başabaş Noktası';
     }
 }
 
@@ -183,7 +183,7 @@ function updateSensitivity(inputs, ordersSent, currentRate) {
         const profitClass = s.netProfit >= 0 ? 'profit-positive' : 'profit-negative';
 
         tr.innerHTML = `
-      <td><strong>${rate}%</strong>${isCurrent ? ' <span style="color:var(--blue);font-size:0.7rem;">● CURRENT</span>' : ''}</td>
+      <td><strong>${rate}%</strong>${isCurrent ? ' <span style="color:var(--blue);font-size:0.7rem;">● MEVCUT</span>' : ''}</td>
       <td>${fmtInt(s.delivered)}</td>
       <td>${fmtInt(s.undelivered)}</td>
       <td>${fmt(s.revenue)}</td>
