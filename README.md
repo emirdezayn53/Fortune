@@ -8,3 +8,4 @@
 # Fortune
 # Fortune
 # Fortune
+# gercekfortune
